@@ -1,0 +1,67 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.users-input-wrapper {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.users-list {
+  display: grid;
+  max-height: 110px;
+  overflow-y: scroll;
+
+  visibility: hidden;
+  text-align: left;
+  padding: 0;
+  list-style: none;
+  box-shadow: 0 0 5px 0 #00000030;
+  
+  position: absolute;
+  top: 1rem;
+
+  transition: visibility 0.1s;
+}
+
+.users-input:focus + .users-list {
+  visibility: visible;
+}
+
+.users-list-item {
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.users-list-item__image {
+  width: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.users-list-item:hover {
+  background-color: #781d7e21;
+  transform: scale(1.05);
+}
